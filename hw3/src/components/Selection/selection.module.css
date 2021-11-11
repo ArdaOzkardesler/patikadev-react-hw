@@ -1,0 +1,9 @@
+select {
+  background-color: #8ca1a5;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid #316b83 !important;
+  height: 50px;
+  text-align: center;
+}
