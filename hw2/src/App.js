@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { nanoid } from 'nanoid'
+import Input from './components/Input';
+import List from './components/List';
 import './App.css';
 
 function App() {
+  const [todos, setTodos] = useState([
+    {
+      id: nanoid(),
+      value: 'Task1',
+      done: false,
+    },
+    {
+      id: nanoid(),
+      value: 'Task2',
+      done: true,
+    },
+    {
+      id: nanoid(),
+      value: 'Task3',
+      done: false,
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section className='todoapp'>
+        <Input todos={todos} addTodo={setTodos} />
+        <List todos={todos} setTodos={setTodos} />
+      </section>
+    </>
   );
 }
 
