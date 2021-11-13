@@ -1,9 +1,26 @@
-/* add css module styles here (optional) */
+button {
+  padding: 7px 15px;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.primary {
+  background-color: #1890ff;
+  color: white;
+}
+
+.dashed {
+  border-style: dashed;
+}
+
+.text {
+  border: none;
+}
+
+.link {
+  border: none;
+  color: #1890ff;
 }
